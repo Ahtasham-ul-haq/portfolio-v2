@@ -1,28 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./About.scss";
-import { AppWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import { images } from '../../constants'
-// import { urlFor, client } from "../../client";
 
 const abouts = [
   { title: 'Web Developer', description: 'I am a web developer with a passion for building beautiful and functional web        applications', imgUrl: images.about01 },
   { title: 'Frontend Developer', description: 'I am a frontend developer with a passion for building beautiful and functional web applications', imgUrl: images.about02 },
   { title: 'React Native', description: 'I am a mobile app developer with a passion for building beautiful and functional web applications', imgUrl: images.about04 },
-  // { title: 'Web App', description: 'I am good web developer.', imgUrl: images.about04 }
 ]
 
 const About = () => {
-
-  // const [abouts, setAbouts] = useState([])
-  // useEffect(() => {
-  //   const query = '*[_type == "abouts"]'
-
-  //   client.fetch(query)
-  //     .then((data) => {
-  //       setAbouts(data)
-  //     })
-  // }, [])
 
   return (
     <>
@@ -47,4 +35,8 @@ const About = () => {
   )
 };
 
-export default AppWrap(About, 'about');
+export default AppWrap(
+  MotionWrap(About, 'app__about'),
+  'about',
+  'app__whitebg  '
+);

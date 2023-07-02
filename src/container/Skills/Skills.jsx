@@ -1,8 +1,9 @@
-import React from "react";
-import "./Skills.scss";
+import React from 'react'
 
 const Skills = () => {
-  return <div>Skills</div>;
-};
+  return (
+    <div>Skills</div>
+  )
+}
 
-export default Skills;
+export default Skills
